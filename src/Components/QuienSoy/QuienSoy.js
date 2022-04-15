@@ -1,7 +1,7 @@
 import yo from '../../assets/imgs/yo.jpg'
 import './QuienSoy.css'
 import Lottie from 'react-lottie'
-import dev from '../../assets/animacionesLottie/83087-developer-front-end.json'
+import dev from '../../assets/animacionesLottie/63487-programming-computer.json'
 
 export default function QuienSoy(){
     const defaultOptions = {

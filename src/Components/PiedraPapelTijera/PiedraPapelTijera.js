@@ -7,7 +7,7 @@ import papel from '../../assets/imgs/papel.png'
 
 
 export default function PiedraPapelTijera(){
-    const {eleccionJugador,eleccion,eleccionRandom,eleccionIA} = useContext(Juegos)
+    const {eleccionJugador,eleccion,eleccionRandom,eleccionIA,resultado} = useContext(Juegos)
     return(
         <div className="fondoPiedraPapelTijera">
             <h3> Piedra, Papel o Tijera</h3>
@@ -25,11 +25,12 @@ export default function PiedraPapelTijera(){
             {/* Pc o ia */}
             <div className='inteligencia'>
                 <div>
-                    <img src={eleccionIA} alt="" />
+                    <img className='opcionIA' src={eleccionIA} alt="" />
                 </div>
                 
             </div>
-            <button className='' onClick={()=>eleccionRandom()}>Jugar</button>
+            <h4>{resultado}</h4>
+            <button className='jugar' onClick={()=>eleccionRandom()}>Jugar</button>
         </div>
     )
 }
