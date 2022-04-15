@@ -1,0 +1,20 @@
+html{
+    background-color: #000064;
+}
+ul{
+    display: flex;
+    margin-left: 50%;
+    justify-content:space-around;
+    align-items: center;
+}
+ul li{
+    width: 150px;
+    list-style: none;
+}
+ul li p{
+    text-decoration: none;
+    color: white;
+    border-left: 2px white solid;
+    padding-left: 5px;
+    height: 25px;
+}

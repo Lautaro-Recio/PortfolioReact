@@ -1,0 +1,23 @@
+.habilidades{
+    text-align: center;
+    margin: 25px;
+    background-color: whitesmoke;
+    border-radius:15px ;
+    padding: 10px;
+    width: 120px;
+    
+}
+.habilidades p{
+    margin-top: 10px;
+    font-weight: 600;
+    font-family: emoji;
+}
+.habilidades:hover{
+    animation-duration: 1s;
+    animation-name: agrandar;
+    animation-fill-mode: forwards;
+    animation-direction:alternate ;
+}
+@keyframes agrandar {
+    100%{transform: scale(1.2);}
+}

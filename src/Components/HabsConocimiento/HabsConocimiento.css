@@ -1,0 +1,24 @@
+h2{
+    text-align: center;
+    text-decoration: solid;
+    color: white;
+    font-size: 25px;
+}
+img{
+    height: 50px;
+    width: 50px;
+}
+.habs{
+    width: 50%;
+    background-color: #bdbdbd;
+    padding: 1%;
+}
+
+.estudios{
+    width: 50%;
+    background-color: #bdbdbd;
+    padding: 1%;
+}
+.HabsConocimiento{
+    display: flex;
+}

@@ -1,0 +1,67 @@
+.proyectos{
+    background-color: #e4e4e4;
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.fondo{
+    width: 30%;
+    height: 250px;
+    border: 1px solid #acacac;
+    margin: 25px 0px;
+    background-image: url(../../assets/imgs/essenParaTodxs.png);
+    background-size: contain;
+    display: flex;
+}
+/* Aparece de la izquierda */
+.PLeft:hover{
+    opacity: 100%;
+    animation-name: textPro;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0ms;
+    padding-right:50px ;
+    transition: 1s;
+    animation-fill-mode: forwards;
+    animation-direction:alternate ; 
+}
+/* Aparece de la derecha */
+.pRight:hover{
+    opacity: 100%;
+    animation-name: textPro;
+    animation-fill-mode: forwards;
+    animation-direction:alternate ;  
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0ms;
+    padding-left:50px ;
+    transition: 1s;
+    
+}
+.fondo p{
+    opacity: 0%;
+}
+@keyframes textPro {
+    0%{
+        background-color:rgba(0, 0, 0, 0.5);
+        width: 50%;
+        opacity: 0%;
+    }
+    100%{
+        background-color:rgba(0, 0, 0, 0.5);
+        width: 70%;
+        opacity: 100%;
+    }
+}
+.pRight{
+    text-align: right;
+    width: 50%;
+
+
+}
+.PLeft{
+    text-align: left;
+    width: 50%;
+
+}   

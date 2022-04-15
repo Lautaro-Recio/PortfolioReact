@@ -1,0 +1,44 @@
+.fondoPiedraPapelTijera{
+    background-color: rgba(0, 12, 63, 0.753);
+    width: 100%;
+    height: 63%;
+    z-index: 5000;
+    position: absolute;
+    display: flex;
+    background-image: url(../../assets/imgs/candado.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fondoPiedraPapelTijera h3{
+    text-align: center;
+    position: absolute;
+    margin: 1% 35%;
+    width: 30%;
+    color: whitesmoke;
+    background-color: rgba(36, 36, 36, 0.815) ;
+}
+.jugador{
+    width: 50%;
+}
+.jugador img{
+    width: 20%;
+    height: 40%;
+    margin: 5% 15%;
+    border-radius: 25px;
+    border: 4px solid rosybrown;
+    position: absolute;
+}
+.inteligencia{
+    width: 50%;
+}
+.opciones{
+    justify-content: space-around;
+    margin-top:45%;
+    text-align: center;
+}
+.opciones button{
+    margin: 15px;
+    width: 100px;
+    height: 40px;
+}
