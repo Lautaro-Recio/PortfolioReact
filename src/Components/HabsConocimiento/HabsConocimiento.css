@@ -10,15 +10,16 @@ img{
 }
 .habs{
     width: 50%;
-    background-color: #bdbdbd;
+    background-color: #f06d3f;
     padding: 1%;
 }
 
 .estudios{
     width: 50%;
-    background-color: #bdbdbd;
+    background-color: #f06d3f;
     padding: 1%;
 }
 .HabsConocimiento{
     display: flex;
+    height: 500px;
 }

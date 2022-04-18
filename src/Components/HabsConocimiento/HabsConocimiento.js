@@ -14,6 +14,7 @@ export default function HabsConocimiento(){
         <>
             { ganador === false?(
                     <div className='HabsConocimiento'>
+                        <a name="HabilidadesEstudios"/>
                         <PiedraPapelTijera/>
                         <div className='habs'>
                         <Habilidades/>
@@ -24,6 +25,7 @@ export default function HabsConocimiento(){
                     </div>
             ):(
                 <div className='HabsConocimiento'>
+                    <a name="HabilidadesEstudios"/>
                     <div className='habs'>
                     <Habilidades/>
                     </div>

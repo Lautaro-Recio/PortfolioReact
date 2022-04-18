@@ -6,12 +6,48 @@
     height: 300px;
 }
 .QuienSoy img{
-    width: 10%;
-    height: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 30px;    
     border-radius: 100%;
-    margin: 0px 20px 10px 100px;
-    
 }
-.QuienSoy h1, .QuienSoy h2{
-    font-size: 30px;
+.QuienSoy h1{
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 10%;
+} 
+.QuienSoy{
+    padding-top: 30px;
+}
+.QuienSoy p{
+    margin-left: 10%;
+    padding: 0px 50px;
+}
+.QuienSoy div div{
+    width: 80%;
+    display: block;
+}
+.QuienSoy div{
+    display: flex;
+    width:65%;
+}
+.QuienSoy h1 {
+    position: relative;
+}
+.QuienSoy h1 span{
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: #262430;
+    animation: h1Color 3s infinite alternate steps(46);
+}
+
+@keyframes h1Color {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+
 }

@@ -2,15 +2,26 @@ import { createContext, useEffect, useState } from "react"
 import piedra from '../../assets/imgs/piedra.png'
 import tijera from '../../assets/imgs/tijera.jpg'
 import papel from '../../assets/imgs/papel.png'
+import Swal from "sweetalert2"
 
 export const Juegos = createContext()
 
 const JuegosProvider=({children})=>{
     const [eleccion, setEleccion] = useState("")
     const [eleccionIA, setEleccionIA] = useState("")
-    const [resultado, setResultado] = useState("")
     const [ganador, setGanador] = useState(false)
 
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        timer: 3000,
+        showConfirmButton: false,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    }
+    )
     useEffect(()=>{
         condiciones()
     },[eleccionIA || eleccion])
@@ -27,33 +38,59 @@ const JuegosProvider=({children})=>{
         setEleccionIA(eleccionJugadorIA)
     }
     /* ppt piedra papel o tijera */
-
+    function ganaJugador(){
+        Toast.fire({
+            icon: 'success',
+            title: 'Felicitaciones🥳',
+            text: 'Ganaste el primer minijuego!',
+            showCloseButton: false,
+            showCancelButton: false,
+          })
+    }
+    function ganaIA(){
+        Toast.fire({
+            icon: 'error',
+            title: 'Oh no😓',
+            text: 'Perdiste esta vez, vuelve a intentarlo!',
+            showCloseButton: false,
+            showCancelButton: false,
+          })
+    }
     function eleccionJugador(ppt){
         setEleccion(ppt)
     }
 
     function condiciones(){
-        if (eleccion === eleccionIA){/* EMPATE */
-            setResultado("EMPTATE")
+        if((eleccion==="")&&(eleccionIA==="")){
+            
+        }else if ((eleccion === eleccionIA)&&(eleccionIA!=="")){
+            /* EMPATE */
+            Toast.fire({
+                icon: 'error',
+                title: 'Oh no😓',
+                text: 'Empataron esta vez, vuelve a intentarlo!',
+                showCloseButton: false,
+                showCancelButton: false,
+            })
         }else if((eleccion===tijera)&&(eleccionIA===piedra)){ /* Desde aca gana la IA */
-            setResultado("Perdiste vuelve a intentarlo")
+            ganaIA()
         }else if((eleccion===piedra)&&(eleccionIA===papel)){
-            setResultado("Perdiste vuelve a intentarlo")
+            ganaIA()
         }else if((eleccion===tijera)&&(eleccionIA===piedra)){
-            setResultado("Perdiste vuelve a intentarlo")
+            ganaIA()
         }else if((eleccion===piedra)&&(eleccionIA===tijera)){/* Desde aca gana el usuario*/
-            setResultado("Felicidades ganaste!")
+            ganaJugador()
             setGanador(true)
         }else if((eleccion===tijera)&&(eleccionIA===papel)){
-            setResultado("Felicidades ganaste!")
+            ganaJugador()
             setGanador(true)
         }else if((eleccion===papel)&&(eleccionIA===piedra)){
-            setResultado("Felicidades ganaste!")
+            ganaJugador()
             setGanador(true)
         }
     }
     return (
-        <Juegos.Provider value={{eleccionJugador,eleccion,eleccionRandom,eleccionIA,resultado,ganador}}>
+        <Juegos.Provider value={{eleccionJugador,eleccion,eleccionRandom,eleccionIA,ganador}}>
             {children}
         </Juegos.Provider>
     )

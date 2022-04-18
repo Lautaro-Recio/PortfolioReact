@@ -13,12 +13,21 @@ export default function QuienSoy(){
     }
     return(
         <div className='QuienSoy'>
-            <img src={yo} alt="Lautaro Recio" />
+            <a name="QuienSoy"/>
             <div>
-                <h2>Hola soy Lautaro Recio</h2>
-                <h1>Desarrollador Front End</h1>
+                    <img src={yo} alt="Lautaro Recio" />
+                <div>
+                    <h1>    Hola soy Lautaro Recio <br /> Desarrollador Front End <span>&#160;</span></h1>
+                    <p>
+                        En medio de la pandemia decidi empezar a estudiar Desarrollo web, hoy en dia estoy en busqueda 
+                        de nuevas experiencias y retos, con este portfolio lo que busco es combinar el diseño 
+                        y desarrollo junto con algunos juegos simples.
+                        Para acceder a cada seccion el usuario debera ganar el juego que la bloquea, 
+                    asi solo llegara a desbloquear toda la informacion
+                    </p>
+                </div>
             </div>
-            <Lottie options={{animationData: dev, defaultOptions}} width={350} height={500}/>
+            <Lottie options={{animationData: dev, defaultOptions}} width={400} height={550}/>
         </div>
 
     )
