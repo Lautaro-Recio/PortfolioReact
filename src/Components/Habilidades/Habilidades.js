@@ -13,8 +13,8 @@ export default function Habilidade(){
                     <Row>
                             {habs.map((habilidad)=>{
                                 return(    
-                                <Col>  
-                                    <div key={habilidad.id} className='habilidades'>
+                                <Col key={habilidad.id}>  
+                                    <div  className='habilidades'>
                                         <img src={habilidad.img} alt={habilidad.text} />
                                         <p>{habilidad.text}</p>
                                     </div>

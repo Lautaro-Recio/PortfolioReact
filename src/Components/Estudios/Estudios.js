@@ -14,7 +14,7 @@ export default function Estudios(){
                     <Row>
                             {estudios.map((estudio)=>{
                                 return(    
-                                <Col>  
+                                <Col key={estudio.id}>  
                                     <div className='Estudios'>
                                         <img src={estudio.img} alt={estudio.text} />
                                         <p>{estudio.text}</p>

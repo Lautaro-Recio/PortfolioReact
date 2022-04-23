@@ -17,9 +17,9 @@ export default function PiedraPapelTijera(){
                     <img src={eleccion} alt="" />
                 </div>
                 <div className='opciones'>
-                    <button onClick={()=>eleccionJugador(tijera)}>Tijera</button>
-                    <button onClick={()=>eleccionJugador(papel)}>Papel</button>
                     <button onClick={()=>eleccionJugador(piedra)}>Piedra</button>                
+                    <button onClick={()=>eleccionJugador(papel)}>Papel</button>
+                    <button onClick={()=>eleccionJugador(tijera)}>Tijera</button>
                 </div>
             </div>
             {/* Pc o ia */}
