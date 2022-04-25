@@ -1,6 +1,11 @@
 html{
     background-color: #000064;
 }
+.sticky{
+    position: fixed;
+    width: 100%;
+    z-index: 10000000000000000000000000;
+}
 .bg-light{
     background-color: #8c178e;
 }

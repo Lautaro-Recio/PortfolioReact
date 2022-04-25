@@ -10,6 +10,8 @@ const JuegosProvider=({children})=>{
     const [eleccion, setEleccion] = useState("")
     const [eleccionIA, setEleccionIA] = useState("")
     const [ganador, setGanador] = useState(false)
+    const [empezar,setEmpezar] =useState(false)
+
     //PIEDRA PAPEL O TIJERAS
         const Toast = Swal.mixin({
             toast: true,
@@ -93,6 +95,7 @@ const JuegosProvider=({children})=>{
     //Circulos
         const [ganadorCirculos,setGanadorCirculos]=useState(false)
         const [niveles,setNiveles]=useState(1)
+        const [jugar,setJugar]=useState(false)
         let colores = [
             {id:1,color:"red"},
             {id:2,color:"red"},
@@ -100,10 +103,9 @@ const JuegosProvider=({children})=>{
             {id:4,color:"red"},
             {id:5,color:"red"},
             {id:6,color:"red"},
-            {id:7,color:"red"},
-            {id:8,color:"#c50505"},
+            {id:7,color:"#c50505"},
         ]
-        
+
         function eleccionCirculos(circuloTocado){
             if((circuloTocado !== "red") && (circuloTocado !== "brown")&& (circuloTocado !== "black")&& (circuloTocado !== "orange")&& (circuloTocado !== "grey")&& (circuloTocado !== "white")&& (circuloTocado !== "green")&& (circuloTocado !== "violet")&& (circuloTocado !== "yellow")&& (circuloTocado !== "pink")&& (circuloTocado !== "deeppink")&& (circuloTocado !== "cadetblue")&& (circuloTocado !== "blue")&& (circuloTocado !== "peru")&& (circuloTocado !== "palegreen") ){
                 setNiveles(niveles+1)
@@ -124,9 +126,22 @@ const JuegosProvider=({children})=>{
 
     
     //HACER SISTEMA DE VIDAS
+    const VidasUsuario=[
+        {id:1,color:"red"},
+        {id:2,color:"red"},
+        {id:3,color:"red"},
+        {id:4,color:"red"},
+        {id:5,color:"red"},
+    ]
+    function restarVida(){
+        console.log(VidasUsuario.length)
+        if(VidasUsuario.length > 0 ){
+            alert("RESTAR VIDA FUNCIONA")
+        }
+    }
     //--------------------------------------------------------------------------------------------//
     return (
-        <Juegos.Provider value={{niveles,colores,ganadorCirculos,eleccionCirculos,eleccionJugador,eleccion,eleccionRandom,eleccionIA,ganador}}>
+        <Juegos.Provider value={{restarVida,VidasUsuario,Toast,empezar,setEmpezar,jugar,setJugar,setNiveles,niveles,colores,ganadorCirculos,eleccionCirculos,eleccionJugador,eleccion,eleccionRandom,eleccionIA,ganador}}>
             {children}
         </Juegos.Provider>
     )
