@@ -1,34 +1,45 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Juegos } from "../Context/Juegos";
 import './Timer.css'
 export default function Timer(){
     // TIMER
-    let [tiempo,setTiempo]=useState(5)
-    const [jugar,setJugar]=useState(false)
-    const Interval= setInterval(() => {
-        setTiempo(tiempo=tiempo-1)
-        if(tiempo===-1){
-            setJugar(false)
-            setTiempo(5)
-            clearInterval(Interval)
-        } 
-    }, 1000);
+    const {restarVida,Toast,setJugar,empezar,setEmpezar}= useContext(Juegos)
+    let [tiempo,setTiempo]=useState(30)
+    if(tiempo===-1){
+        Toast.fire({
+            icon: 'error',
+            title: 'Oh no😓',
+            text: 'Perdiste una vida, vuelve a intentarlo!',
+            showCloseButton: false,
+            showCancelButton: false,
+        })
+        restarVida()
+    } 
     function timer(){
-        setTiempo(5)
-        setJugar(true)
-        
+        const Interval= setInterval(() => {
+            setTiempo(tiempo=tiempo-1)
+            setEmpezar(true)
+        }, 1000); 
+        setTimeout(()=>{
+            setJugar(false)
+            setTiempo(30)
+            clearInterval(Interval)
+        },31000)  
     }
     
     return(
         <>
-            {jugar=== false?(
+            {(empezar===true)?(
                 <div className="timer" >
                     <h3 >{tiempo}</h3>
-                    <button onClick={timer}>Jugar</button>
                 </div>
                 ):(
+                
                 <div className="timer" >
                     <h3 >{tiempo}</h3>
-                </div>                )
+                    <button onClick={timer}>Empezar</button>
+                </div>
+                )
             }
         </>
 
