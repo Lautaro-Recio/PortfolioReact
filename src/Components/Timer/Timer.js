@@ -7,7 +7,6 @@ export default function Timer(){
     const Interval= setInterval(() => {
         setTiempo(tiempo=tiempo-1)
         if(tiempo===-1){
-            alert("perdiste Vuelve a intentarlo")
             setJugar(false)
             setTiempo(5)
             clearInterval(Interval)
