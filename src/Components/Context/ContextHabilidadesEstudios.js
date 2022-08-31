@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { createContext } from "react"
 import html from '../../assets/imgs/html.png'
 import css from '../../assets/imgs/css.png'
@@ -11,35 +13,45 @@ import sass from '../../assets/imgs/sass.png'
 import jquery from '../../assets/imgs/jquery.png'
 import npm from '../../assets/imgs/npm.png'
 import react from '../../assets/imgs/react.png'
+import mongodb from '../../assets/imgs/mongodb.png'
+import sql from '../../assets/imgs/sql.jpg'
+import express from '../../assets/imgs/express.png'
+import estudioDes from '../../assets/imgs/estudioDes.png'
+import estudioJS from '../../assets/imgs/estudioJS.png'
+import estudioReact from '../../assets/imgs/estudioReact.png'
 
 export const ContextHabilidadesEstudios = createContext()
 
 const ContextHabilidadesEstudiosProvider=({children})=>{
     const habs = [
-        {id:1,img:html,rotacion:30,text:"HTML",},
-        {id:2,img:css,rotacion:60,text:"CSS",},
-        {id:3,img:javascript,rotacion:90,text:"JavaScript",},
-        {id:4,img:react,rotacion:120,text:"React js",},
-        {id:5,img:github,rotacion:150,text:"GitHub",},
-        {id:6,img:firebase,rotacion:180,text:"FireBase",},
-        {id:7,img:sass,rotacion:210,text:"Saas/Scss",},
-        {id:8,img:bootstrap,rotacion:240,text:"Bootstrap",},
-        {id:9,img:jquery,rotacion:270,text:"Jquery",},
-        {id:10,img:python,rotacion:300,text:"Python",},
-        {id:11,img:node,rotacion:330,text:"Node.js",},
-        {id:12,img:npm,rotacion:360,text:"Npm",},
+        {id:1,img:html,text:"HTML",},
+        {id:2,img:css,text:"CSS",},
+        {id:3,img:javascript,text:"JavaScript",},
+        {id:4,img:react,text:"React js",},
+        {id:5,img:github,text:"GitHub",},
+        {id:6,img:firebase,text:"FireBase",},
+        {id:7,img:sass,text:"Saas/Scss",},
+        {id:8,img:bootstrap,text:"Bootstrap",},
+        {id:9,img:jquery,text:"Jquery",},
+        {id:10,img:python,text:"Python",},
+        {id:11,img:node,text:"Node.js",},
+        {id:12,img:npm,text:"Npm",},
+        {id:13,img:mongodb,text:"Mongo DB",},
+        {id:14,img:sql,text:"SQL",},
+        {id:15,img:express,text:"Express js",},
+
     ]
 
     const estudios= [
-        {id:1,img:html,rotacion:30,text:"HTML",},
-       
+        {id:1,img:estudioJS, text:"En este curso adquiri conocimientos en las tecnologias Html, Css, GitHub, Sass/scss y Bootstrap, en el cual finalice en el top 10 de alumnos destacados" },
+        {id:2,img:estudioDes,text:"En este curso adquiri conocimientos en las tecnologias JavaScript, Jquery, Node JS y Npm, en el cual finalice en el top 10 de alumnos destacados" },
+        {id:3,img:estudioReact, text:"En este curso adquiri conocimientos en las tecnologias React js y Firebase, en el cual finalice en el top 10 de alumnos destacados" },
+
     ]
-    function hola(){
-        console.log("HOLA")
-    }
+    
     
     return (
-        <ContextHabilidadesEstudios.Provider value={{habs, estudios,hola}}>
+        <ContextHabilidadesEstudios.Provider value={{habs, estudios}}>
             {children}
         </ContextHabilidadesEstudios.Provider>
     )

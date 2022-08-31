@@ -1,0 +1,9 @@
+.contact {
+    display: flex;
+}
+.contact h6 {
+    text-align: center;
+}
+.contact div{
+    width: 50%;
+}

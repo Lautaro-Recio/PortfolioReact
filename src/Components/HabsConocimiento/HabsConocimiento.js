@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './HabsConocimiento.css'
 import Habilidades from '../Habilidades/Habilidades'
 import Estudios from '../Estudios/Estudios';

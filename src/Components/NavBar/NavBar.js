@@ -1,3 +1,4 @@
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Navbar,Nav,NavDropdown } from 'react-bootstrap';
 import Vidas from '../Vidas/Vidas';

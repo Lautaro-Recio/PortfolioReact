@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useContext, useState } from 'react'
 import { Juegos } from '../Context/Juegos'
 import './Vidas.css'

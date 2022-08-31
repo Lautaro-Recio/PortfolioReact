@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useContext } from 'react'
 import { Juegos } from '../Context/Juegos'
 import './PiedraPapelTijera.css'

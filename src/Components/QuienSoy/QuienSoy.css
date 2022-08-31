@@ -1,9 +1,9 @@
 .QuienSoy{
-    background-color: #262430;
+    background-color: #e2e5e9;
     color: white;
     display: flex;
     align-items: center;
-    height: 300px;
+    height: 400px;
 }
 .QuienSoy img{
     width: 150px;
@@ -38,7 +38,7 @@
     position: absolute;
     right: 0;
     left: 0;
-    background-color: #262430;
+    background-color: #e2e5e9;
     animation: h1Color 3s infinite alternate steps(46);
 }
 

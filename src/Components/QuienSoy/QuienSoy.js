@@ -1,3 +1,5 @@
+import React from 'react';
+
 import yo from '../../assets/imgs/yo.jpg'
 import './QuienSoy.css'
 import Lottie from 'react-lottie'

@@ -1,3 +1,4 @@
+import React from 'react';
 
 import './ProyectosContainer.css'
 import CirculosColores from '../CirculosColores/CirculosColores'
@@ -15,11 +16,13 @@ export default function ProyectosContainer(){
 
                 
                 <div className='divProyectos'>
+                    <h2>Proyetos realizados</h2>
                     <CirculosColores/>
                     <Proyectos/>
                 </div>
             ):(
                 <div className='divProyectos'>
+                    <h2>Proyetos realizados</h2>
                     <Proyectos/>
                 </div>
             )

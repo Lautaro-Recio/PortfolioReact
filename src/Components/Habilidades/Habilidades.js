@@ -1,3 +1,4 @@
+import React from 'react';
 import { useContext } from 'react'
 import { ContextHabilidadesEstudios } from '../Context/ContextHabilidadesEstudios'
 import { Container,Row,Col } from 'react-bootstrap'

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { createContext, useEffect, useState } from "react"
 import piedra from '../../assets/imgs/piedra.png'
 import tijera from '../../assets/imgs/tijera.jpg'
@@ -9,7 +11,7 @@ export const Juegos = createContext()
 const JuegosProvider=({children})=>{
     const [eleccion, setEleccion] = useState("")
     const [eleccionIA, setEleccionIA] = useState("")
-    const [ganador, setGanador] = useState(false)
+    const [ganador, setGanador] = useState(true)
     const [empezar,setEmpezar] =useState(false)
 
     //PIEDRA PAPEL O TIJERAS
@@ -93,7 +95,7 @@ const JuegosProvider=({children})=>{
         }
     //--------------------------------------------------------------------------------------------//
     //Circulos
-        const [ganadorCirculos,setGanadorCirculos]=useState(false)
+        const [ganadorCirculos,setGanadorCirculos]=useState(true)
         const [niveles,setNiveles]=useState(1)
         const [jugar,setJugar]=useState(false)
         let colores = [

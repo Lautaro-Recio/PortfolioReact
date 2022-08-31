@@ -1,0 +1,12 @@
+form div{
+    margin: 5%;
+}
+form div p{
+    margin: 0%;
+}
+form div input{
+    width: 100%;
+}
+form button{
+    margin: 0% 10%;
+}
