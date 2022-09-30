@@ -1,7 +1,7 @@
 .habilidades{
     text-align: center;
     margin: 5%;
-    background-color: whitesmoke;
+    background-color: #8b97a7;
     border-radius:15px ;
     padding: 10px;
     width: 100px;
@@ -12,7 +12,7 @@
     font-weight: 600;
     font-family: emoji;
 }
-.habilidades:hover{
+.habilidades:hover, .tecImg:hover{
     animation-duration: 1s;
     animation-name: agrandar;
     animation-fill-mode: forwards;
@@ -20,4 +20,24 @@
 }
 @keyframes agrandar {
     100%{transform: scale(1.1);}
+}
+
+@media only screen and (max-width:577px)
+{
+    .habilidades{
+        text-align: center;
+        margin: 5% 10%;
+        background-color: #8b97a7;
+        border-radius:15px ;
+        padding: 10px;
+        width: 80%;
+    }
+
+    .habilidades p{
+        margin: 5px 0px;
+        font-weight: 600;
+        font-family: emoji;
+        font-size: 15px;
+    }
+  
 }

@@ -1,3 +1,7 @@
+.contactContainer{
+    display: block;
+    margin-top: 2%;
+}
 .contact {
     display: flex;
 }
@@ -5,5 +9,16 @@
     text-align: center;
 }
 .contact div{
-    width: 50%;
+    width: 100%;
+    padding: 1% 5%;
+}
+
+
+
+@media only screen and (max-width:577px)
+{
+    .contact {
+        display: block;
+    }
+  
 }

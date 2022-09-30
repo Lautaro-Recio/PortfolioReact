@@ -4,15 +4,20 @@ import QuienSoy from "./Components/QuienSoy/QuienSoy";
 import HabsConocimiento from "./Components/HabsConocimiento/HabsConocimiento";
 import ProyectosContainer from "./Components/ProyectosContainer/ProyectosContainer";
 import Contact from './Components/contact/Contact';
+import Particulas from './Components/Particulas/Particulas';
+import "./App.css"
 function App() {
   return (
-      <div >
-        <NavBar/>
-        <QuienSoy/>
-        <HabsConocimiento/>
-        <ProyectosContainer/>
-        <Contact/>
-      </div>
+    <>
+        <Particulas/>
+        <div className='z2'>
+          <NavBar/>
+          <QuienSoy/>
+          <HabsConocimiento/>
+          <ProyectosContainer/>
+          <Contact/>
+        </div>
+    </>
   );
 }
 

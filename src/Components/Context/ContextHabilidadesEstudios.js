@@ -14,7 +14,7 @@ import jquery from '../../assets/imgs/jquery.png'
 import npm from '../../assets/imgs/npm.png'
 import react from '../../assets/imgs/react.png'
 import mongodb from '../../assets/imgs/mongodb.png'
-import sql from '../../assets/imgs/sql.jpg'
+import mariaDB from '../../assets/imgs/mariadb.png'
 import express from '../../assets/imgs/express.png'
 import estudioDes from '../../assets/imgs/estudioDes.png'
 import estudioJS from '../../assets/imgs/estudioJS.png'
@@ -37,7 +37,7 @@ const ContextHabilidadesEstudiosProvider=({children})=>{
         {id:11,img:node,text:"Node.js",},
         {id:12,img:npm,text:"Npm",},
         {id:13,img:mongodb,text:"Mongo DB",},
-        {id:14,img:sql,text:"SQL",},
+        {id:14,img:mariaDB,text:"Maria DB",},
         {id:15,img:express,text:"Express js",},
 
     ]

@@ -3,10 +3,39 @@ form div{
 }
 form div p{
     margin: 0%;
+    color: white;
 }
 form div input{
-    width: 100%;
+    width: 80%;
+    border: 0px;
+    background: #faebd700;
+    border-bottom: 2px solid #8b97a7;  
+    color: white; 
 }
+form div input:-ms-keyboard-active{
+    background: #8b97a7;
+
+}
+
 form button{
-    margin: 0% 10%;
+    margin: 1% 11%;
+    width: 20%;
+    border-radius: 5px;
+    border: 2px solid #8b97a7;
+    background-color: #001c40;
+    color: white;
+}
+form button:hover{ 
+    background-color: #8b97a7;
+}
+
+
+@media only screen and (max-width:577px)
+{
+    .form {
+        display: grid;
+    }
+    form div input{
+        width: 90%; 
+    }
 }
