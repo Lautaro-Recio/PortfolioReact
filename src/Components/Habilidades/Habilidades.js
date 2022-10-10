@@ -10,8 +10,8 @@ export default function Habilidade(){
         <>
                             {habs.map((habilidad)=>{
                                 return(    
-                                    <div  className='habilidades'>
-                                        <img src={habilidad.img} alt={habilidad.text} />
+                                    <div key={habilidad.id}  className='habilidades'>
+                                        <img loading="lazy" src={habilidad.img} alt={habilidad.text} />
                                         <p>{habilidad.text}</p>
                                     </div>                            )})}
                    

@@ -14,8 +14,8 @@ export default function Estudios(){
             <Carousel fade>
                 {estudios.map((estudio)=>{
                     return(    
-                        <Carousel.Item>
-                            <img className="d-block w-80"  src={estudio.img} alt={estudio.title} />
+                        <Carousel.Item key={estudio.id}>
+                            <img loading="lazy" className="d-block w-80"  src={estudio.img} alt={estudio.title} />
                             <Carousel.Caption>
                                 <div className='info'>
                                     <h5>{estudio.title}</h5>

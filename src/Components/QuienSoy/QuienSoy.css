@@ -13,56 +13,55 @@
 }
 .QuienSoy h1{
     position: relative;
-    font-size:30px;
-    margin-left: 10%;
+    font-size:35px;
+    margin-left: 16%;
     display: flex;
+    padding-right: 0%;
+    margin-top: 2%;
+    color: #ffd9e2;
+    text-shadow: 0 0 0 transparent, 0 0 10px #609ce9, 0 0 20px #609ce9, 0 0 40px #609ce9, 0 0 100px #609ce9;
+    -webkit-animation: blink 4s infinite alternate;
+            animation: blink 4s infinite alternate;
+            font-family: "neontubes";
+} 
+.QuienSoy h2{
+  font-size:30px;
+  
 } 
 .QuienSoy{
     padding-top: 30px;
 }
 .QuienSoy p{
-    margin-left: 10%;
-    padding: 0px 50px;
+    margin-left: 20%;
+    padding-right: 15%;
+    font-weight: 200;
+
 }
 .QuienSoy div div{
-    width: 80%;
+    width: 100%;
     display: block;
 }
 .QuienSoy div{
     display: flex;
-    width:65%;
+    width:100%;
 }
 
-.QuienSoy h1 span{
-    margin: 1px;
-    font-size: 30px;
-}
-.QuienSoy h1 span:hover{
-    animation-duration: 0.5s;
-    animation-name: h1Color;
-    animation-fill-mode: forwards;
-    animation-direction:alternate ;
-}
 
-@keyframes h1Color {
-    25%{
-        transform: scale(0.8,1.3);
-    }
-    100%{
-        color: #8b97a7;
-    }
-
-}
 
 @media only screen and (max-width:577px)
 {
     .QuienSoy{
         padding-top: 10%;
     }
+    .QuienSoy h1{
+        margin-left: 10%;
+        padding: 0px 0px;
+    }
+   
     .QuienSoy p{
         margin-left: 10%;
         padding: 0px 0px;
-        font-size: 15px;
+        font-size: 13px;
     }
     .QuienSoy div{
         display: flex;
@@ -72,3 +71,56 @@
         display: none !important;
     }
 }
+
+
+
+@font-face {
+    font-family: 'neontubes';
+    src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot");
+    src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix") format("embedded-opentype"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2") format("woff2"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff") format("woff"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  @-webkit-keyframes blink {
+    40% {
+      opacity: 1;
+    }
+    42% {
+      opacity: 0.8;
+    }
+    43% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0.2;
+    }
+    46% {
+      opacity: 1;
+    }
+  }
+  @keyframes blink {
+    40% {
+      opacity: 1;
+    }
+    42% {
+      opacity: 0.8;
+    }
+    43% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0.2;
+    }
+    46% {
+      opacity: 1;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .main {
+      width: 400px;
+    }
+   
+    
+  }

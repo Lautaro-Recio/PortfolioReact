@@ -4,6 +4,8 @@ form div{
 form div p{
     margin: 0%;
     color: white;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 form div input{
     width: 80%;
@@ -12,23 +14,103 @@ form div input{
     border-bottom: 2px solid #8b97a7;  
     color: white; 
 }
-form div input:-ms-keyboard-active{
-    background: #8b97a7;
 
+
+/* Button animation */
+
+.buttons{
+    display: flex;
+    position: relative;
+    
+}
+.buttons button{
+    position: relative;
+    text-decoration: none;
+    pointer-events: all;
+    margin: 1% 10%;
+    border: 2px solid #609ce9;
+    transition: 0.5s;
+    width: 100px; 
+    justify-content: space-between;
+    background-color: transparent;
 }
 
-form button{
-    margin: 1% 11%;
-    width: 20%;
-    border-radius: 5px;
-    border: 2px solid #8b97a7;
-    background-color: #001c40;
+.buttons button p{
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    border-radius: 15px ;
+    position: relative;
+    z-index: 100;
+    font-size: 13px;
     color: white;
-}
-form button:hover{ 
-    background-color: #8b97a7;
+    margin: 5px;
 }
 
+.buttons button:hover p {
+    color: #eef0f1d3;
+
+}
+.buttons button::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background:#609ce9;
+    box-shadow: 5px -8px 0 #609ce9,5px 8px 0 #609ce9;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s,0.5,0s,0s;
+
+}
+
+.buttons button:hover::before {
+    width: 100%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px -8px 0 #609ce9,5px 8px 0 #609ce9;
+    transition-delay: 0s,0.5s,1s,1s;
+
+}
+
+
+/* right */
+
+
+.buttons button::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background:#609ce9;
+    box-shadow: -5px -8px 0 #609ce9,-5px 8px 0 #609ce9;
+    transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s,0.5,0s,0s;
+
+}
+
+.buttons button:hover::after {
+    width: 100%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px -8px 0 #609ce9,-5px 8px 0 #609ce9;
+    transition-delay: 0s,0.5s,1s,1s;
+
+}
+
+.buttons button:hover {
+    box-shadow: 
+    0 0 10px #609ce9,
+    0 0 20px #609ce9,
+    0 0 40px #609ce9,
+    0 0 80px #609ce9,
+    0 0 160px #609ce9;
+}
 
 @media only screen and (max-width:577px)
 {

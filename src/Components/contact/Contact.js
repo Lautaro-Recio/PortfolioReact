@@ -5,7 +5,7 @@ import Redes from '../Redes/Redes';
 import "./Contact.css"
 export default function Contact(){
     return(
-        <div className='contactContainer'>
+        <div className='contactContainer' id="Contacto">
             <h2>Contacto</h2>
             <div className='contact'>
             <div>

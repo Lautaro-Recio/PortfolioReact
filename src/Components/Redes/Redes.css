@@ -3,18 +3,51 @@
     display: flex;
     margin: 5%;
     color:white;
-    width: 50%;
     border-radius: 25px;
-    border: 2px solid #8b97a7;
-    width: 80% !important;
+    box-shadow: 
+    0 0 1px #609ce9,
+    0 0 2px #609ce9,
+    0 0 4px #609ce9,
+    0 0 8px #609ce9,
+    0 0 16px #609ce9;
+    width: 20% !important;
+
+    transition: 0.5s;
 }
-.redes :hover{
-   background-color:#8b97a7 ;
+.redes div:hover{
+    width: 80% !important;
+
 }
 
 .redes p{
-    margin: 2% 2%;
+    opacity: 0;
+    visibility: hidden;
+    margin: 2% 0%;
+    position: absolute;
+    transition: 0.5s;
+    width: 150px;
+    font-weight: 100;
+    font-size: 13px;
+    font-family: "neontubes";
+
 }
+.redes div:hover p{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(50%,-50%);
+
+}
+.redes div:hover img{
+    opacity: 1;
+    visibility: visible;
+}
+.redes div:hover{
+    background-color: #2960a8c0;
+}
+
+
+
+
 @media only screen and (max-width:577px)
 {
     .redes p{
@@ -22,6 +55,7 @@
     }
     .redes{
         display: flex;
+        justify-content: space-around;
     }
     .redes div{
         border: transparent;
@@ -30,5 +64,17 @@
     .redes img{
         width: 50px;
         height: 50px;
+    }
+    .redes div:hover{
+        background-color: transparent;
+    }
+    .redes div{
+    
+        box-shadow: none;
+       
+    }
+    .redes div:hover p{
+        display: none;;
+    
     }
 }

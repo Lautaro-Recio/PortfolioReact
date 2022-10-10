@@ -1,7 +1,7 @@
 .habilidades{
     text-align: center;
     margin: 5%;
-    background-color: #8b97a7;
+    background-color: #909babbd;
     border-radius:15px ;
     padding: 10px;
     width: 100px;
@@ -9,7 +9,7 @@
 }
 .habilidades p{
     margin-top: 10px;
-    font-weight: 600;
+    font-weight: 100;
     font-family: emoji;
 }
 .habilidades:hover, .tecImg:hover{

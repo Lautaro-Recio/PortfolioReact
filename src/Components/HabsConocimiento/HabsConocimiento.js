@@ -11,8 +11,7 @@ export default function HabsConocimiento(){
     return(
         <>
        
-                <div className='HabsConocimiento'>
-                    <a name="HabilidadesEstudios"/>
+                <div className='HabsConocimiento' id='HabilidadesEstudios'>
                     <div className='block'>
                     <h2>Conocimientos</h2>
 
