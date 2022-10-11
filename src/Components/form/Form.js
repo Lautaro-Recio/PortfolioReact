@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import cv from "../../assets/docs/cv-lautaro-recio.pdf"
 import "./Form.css"
 
 export default function Contact(){
@@ -25,7 +26,7 @@ export default function Contact(){
 
     return(
         <>
-            <form id="my_form" className="form" method="POST" action="https://formsubmit.co/reciolauti@gmail.com">
+            <form id="my_form" method="POST" action="https://formsubmit.co/reciolauti@gmail.com76b542f3af15a1c14a9f11ae42081682">
                 <div>
                     <p style={{color: (name=== "" ? `` :( expresiones.nombre.test(name)===false?"red": (name=== " " ?" ":"green"))) }}>Nombre y apellido</p>
                     <input type="text" name='name' style={{borderRadius: name ==="" ?"":"5px",boxShadow: name ==="" ?"":"0 0 10px #609ce9,0 0 20px #609ce9,0 0 40px #609ce9"}} value={name} onChange={nombreChange}/>
@@ -42,11 +43,12 @@ export default function Contact(){
                 <div className='buttons'>
                     <button type='reset' onClick={reset} ><p>Reset</p> </button>
                     <button disabled={((expresiones.gmail.test(email)===false) || (expresiones.nombre.test(name)===false) || (expresiones.consulta.test(consulta)===false))} ><p>Enviar</p> </button> 
-                    <input type="hidden" name='_next' value="http://localhost:3000/"/>
+                    <input type="hidden" name='_next' value="https://lautaro-recio-dev.netlify.app/"/>
                     <input type="hidden" name='_captcha' value="false"/>
 
                 </div>
-
+                
+                <a href={cv} download="Curriculum-Lautaro-Recio">Curriculum Vitae </a>
             </form> 
         </>
     )

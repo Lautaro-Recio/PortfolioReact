@@ -1,5 +1,10 @@
+form{
+    text-align: center;
+}
 form div{
     margin: 5%;
+    text-align:left;
+
 }
 form div p{
     margin: 0%;
@@ -112,10 +117,36 @@ form div input{
     0 0 160px #609ce9;
 }
 
+form a{
+    text-align: center;
+    text-decoration: none;
+    padding: 2%;
+    border: 2px solid #609ce9;
+    color: white;
+    margin-right: 5%;
+}
+form a:hover{
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 
+    0 0 10px #609ce9,
+    0 0 20px #609ce9,
+    0 0 40px #609ce9,
+    0 0 80px #609ce9,
+    0 0 160px #609ce9;
+    padding: 2%;
+    border: 2px solid #609ce9;
+    color: white;
+    margin-bottom: 50px;
+}
 @media only screen and (max-width:577px)
 {
-    .form {
+    form {
         display: grid;
+    }
+    form a{
+        width: 60%;
+        margin: 0% 20%;
     }
     form div input{
         width: 90%; 

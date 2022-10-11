@@ -4,6 +4,7 @@
 }
 .contact {
     display: flex;
+    margin-bottom: 50px;
 }
 .contact h6 {
     text-align: center;

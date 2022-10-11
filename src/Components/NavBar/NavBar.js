@@ -30,7 +30,7 @@ export default function NavBar (){
                 <Nav.Link className={(scroll >= 0 && scroll <= 399) ?"clicked":"noClicked"} href="#QuienSoy">Quien soy?</Nav.Link>
                 <Nav.Link className={(scroll >= 400 && scroll <= 899) ?"clicked":"noClicked"} href="#HabilidadesEstudios">Habilidades y Estudios</Nav.Link>
                 <Nav.Link className={(scroll >= 900 && scroll <= 1999) ?"clicked":"noClicked"} href="#Proyectos">Proyectos</Nav.Link>
-                <Nav.Link className={(scroll >= 2000 && scroll <= 2400) ?"clicked":"noClicked"} href="#Contacto">Contacto</Nav.Link>
+                <Nav.Link className={(scroll >= 2000 && scroll <= 2800) ?"clicked":"noClicked"} href="#Contacto">Contacto</Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Container>
